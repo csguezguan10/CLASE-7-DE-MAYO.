@@ -117,8 +117,9 @@ x_2 &= \dot{y} \\
 \end{aligned}
 $$
 
-- Donde \( b_0 = \frac{1}{M} \) y \( f = -\frac{K}{M}x_1 - \frac{B}{M}x_2 \)
-
+* Donde:
+  $\qquad b_0 = \frac{1}{M}$
+  $\qquad f = -\frac{K}{M}x_1 - \frac{B}{M}x_2$
 ---
 
 ## Comparación PID vs ADRC
