@@ -3,32 +3,28 @@
 
 ## Introducción
 
-El **Control por Rechazo Activo de Perturbaciones (ADRC)** es una técnica moderna y robusta que permite controlar sistemas con incertidumbres internas y perturbaciones externas, sin depender de un modelo matemático preciso. ADRC fue introducido formalmente por **Han (2009)** y extendido por **Z. Gao (2003)**.
+El **Control por Rechazo Activo de Perturbaciones (ADRC)** es una técnica moderna y robusta que permite controlar sistemas con incertidumbres internas y perturbaciones externas, sin depender de un modelo matemático preciso. ADRC fue desarrollado por el profesor Jingqing Han en la década de 1990 como una alternativa robusta al control PID tradicional y extendido por **Z. Gao (2003)**.
 
 ---
 
 ## Fundamentos del ADRC
+ADRC divide el diseño de control en tres bloques principales:
 
+* **Controlador Lineal de Retroalimentación (Linear Feedback Controller):** se utiliza para cerrar el lazo de control con ganancia proporcional.
+* **Observador de Estado Extendido (ESO):** su función es estimar tanto el estado como la perturbación total del sistema (incluyendo modelado desconocido).
+* **Compensador de Perturbaciones:** emplea la estimación de la perturbación para cancelar activamente su efecto.
+
+Este método se vuelve efectivo incluso en sistemas donde la dinámica completa no está disponible, ya que asume una estructura general y trata el modelado desconocido como una perturbación externa que puede ser estimada y compensada.
 ### Características clave (Gao, 2014):
 - No requiere un modelo riguroso del sistema.
 - Estima la **perturbación total** (modelo + entorno) en tiempo real.
 - Induce al sistema a comportarse como una **planta nominal**.
 
----
-
 ## Componentes del ADRC
 
-1. **Generador de Trayectorias (Tracking Differentiator)**  
-   Suaviza la referencia y genera sus derivadas.
-
-2. **ESO - Observador de Estado Extendido**  
-   Estima:
-   - Estados del sistema.
-   - Perturbación total.
-
-3. **Controlador de Retroalimentación**  
-   Aplica la acción de control compensando perturbaciones.
-
+* **ESO (Extended State Observer):** Estima el estado extendido del sistema, que incluye las perturbaciones y modelado no conocido. Utiliza una estructura de observador de alta ganancia.
+* **Controlador de retroalimentación:** Usualmente un PD o un controlador de primer orden, que se encarga de cumplir con los objetivos de seguimiento.
+* **Estimación de entrada generalizada (Total Disturbance Estimation):** Se modela como una variable adicional en el observador.
 ---
 
 ## Modelo Matemático
