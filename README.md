@@ -355,6 +355,14 @@ Cuando múltiples variables están acopladas entre sí (ej. temperatura y humeda
 
 ADRC trata los efectos cruzados como perturbaciones, permitiendo control canal por canal de forma robusta.
 
+## Conclusiones
+
+* El Control por Rechazo Activo de Perturbaciones (ADRC) es una técnica robusta que permite controlar sistemas con incertidumbres internas, perturbaciones externas y modelos inexactos.
+* A diferencia de controladores clásicos como el PID, ADRC no requiere una identificación precisa del modelo y logra una alta calidad de control mediante la estimación y cancelación activa de perturbaciones.
+* El uso del Observador de Estado Extendido (ESO) permite estimar dinámicas desconocidas en tiempo real, lo que mejora la capacidad de adaptación del sistema a condiciones cambiantes.
+* El enfoque LADRC, por su estructura lineal, resulta práctico para la implementación en sistemas reales, con una sintonización basada en anchos de banda definidos ($\omega_o$ y $\omega_c$).
+* Las aplicaciones de ADRC se extienden a sistemas electrónicos, térmicos, robóticos y multivariables, demostrando su versatilidad y efectividad en contextos donde otros métodos fallan.
+* En resumen, ADRC representa un avance conceptual y práctico en el diseño de sistemas de control modernos, ideal para situaciones donde el modelado preciso no es viable.
 ---
 
 ## Referencias
