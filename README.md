@@ -329,12 +329,31 @@ Este modelo tiene la forma ideal para ser controlado con ADRC, porque:
 
 ---
 
-## Aplicaciones
+## Aplicaciones del ADRC
 
-- Convertidores DC-DC
-- Robots manipuladores
-- Sistemas térmicos
-- Sistemas multivariables desacoplados (DDC)
+**1. Convertidores DC-DC**
+
+Los convertidores como buck o boost presentan dinámica no lineal y son sensibles a cambios en carga o tensión de entrada.
+
+ADRC permite una regulación robusta sin requerir un modelo exacto, compensando perturbaciones en tiempo real.
+
+**2. Robots manipuladores**
+
+Los robots tienen dinámicas complejas, con fricción, acoplamiento y cargas variables.
+
+ADRC mejora el control de cada articulación estimando fuerzas no modeladas y garantizando precisión en el seguimiento.
+
+**3. Sistemas térmicos**
+
+Sistemas como hornos o cámaras térmicas tienen respuesta lenta y están expuestos a perturbaciones externas.
+
+ADRC ofrece una estrategia adaptable, manteniendo estabilidad sin conocer todos los parámetros térmicos.
+
+**4. Sistemas multivariables desacoplados (DDC)**
+
+Cuando múltiples variables están acopladas entre sí (ej. temperatura y humedad), el control se complica.
+
+ADRC trata los efectos cruzados como perturbaciones, permitiendo control canal por canal de forma robusta.
 
 ---
 
@@ -344,6 +363,3 @@ Este modelo tiene la forma ideal para ser controlado con ADRC, porque:
 - Gao, Z. (2003). *Active Disturbance Rejection Control: A Paradigm Shift in Control Design*.
 - Martínez et al. (2021). *Control por Rechazo Activo de Perturbaciones*, RIAI.
 
----
-
-> **Nota**: Este documento está basado en apuntes académicos, simulaciones y el artículo “Control por rechazo activo de perturbaciones: guía de diseño y aplicación (RIAI, 2021)”.
