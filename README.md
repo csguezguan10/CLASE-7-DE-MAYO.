@@ -32,6 +32,9 @@ Este método se vuelve efectivo incluso en sistemas donde la dinámica completa 
 ## Modelo Matemático
 
 ### Modelo extendido (2º orden):
+
+Modelo matemático extendido de segundo orden en espacio de estados, que incluye perturbaciones. En este contexto, se hace referencia a un Sistema Dinámico No Lineal extendido, utilizado comúnmente en técnicas como el Control por Rechazo Activo de Perturbaciones (ADRC). Este tipo de modelo amplía el sistema original al incluir no solo las variables de estado típicas (como posición y velocidad), sino también una estimación de la perturbación o incertidumbre como una variable adicional. Esto permite diseñar observadores y controladores más robustos frente a perturbaciones externas o cambios en la dinámica del sistema, ya que el modelo intenta capturar de forma explícita las influencias no modeladas directamente.
+
 Para un sistema de segundo orden con perturbaciones, el modelo extendido en espacio de estados se expresa como:
 Sistema Dinámico No Lineal:
 
@@ -64,8 +67,9 @@ y &= x_1
 $$
 
 ## Observador de Estado Extendido (ESO)
-
 ### NADRC (No Lineal):
+bservador de Estado Extendido (ESO) dentro del marco del Control por Rechazo Activo de Perturbaciones No Lineal (NADRC). En este enfoque, el ESO tiene como objetivo estimar los estados del sistema, comúnmente definidos como X1 X2 y una perturbación generalizada X3=F que representa dinámicas desconocidas o perturbaciones externas. El diseño no lineal de este observador busca mejorar la precisión y robustez frente a incertidumbres, utilizando funciones no lineales en lugar de solo ganancias constantes, como se hace en el diseño lineal (LADRC). Esto permite al observador adaptarse mejor a variaciones rápidas o no modeladas en el sistema.
+
 El ESO tiene como función estimar los estados $x_1$, $x_2$ y $x_3 = f$. El diseño no lineal (NADRC) propone el siguiente conjunto de ecuaciones:
 
 $$
@@ -84,6 +88,9 @@ donde:
 * $\beta_i$ son las ganancias del observador.
 
 ### LADRC (Lineal):
+
+la variante LADRC (Control por Rechazo Activo de Perturbaciones Lineal), en la cual se emplea un observador tipo Luenberger para estimar los estados del sistema, incluyendo la perturbación generalizada. A diferencia del diseño no lineal (NADRC), esta versión usa una estructura lineal más simple, lo que facilita su implementación práctica y análisis teórico. El observador Luenberger estima los estados mediante una combinación lineal de las salidas medidas y del modelo interno del sistema, lo cual es efectivo para sistemas con dinámica moderadamente compleja o cuando se busca una solución computacionalmente eficiente.
+
 En la variante LADRC, se utiliza un observador lineal tipo Luenberger:
 
 $$
@@ -95,6 +102,8 @@ $$
 $$
 
 ## Ley de Control
+
+La ley de control es un algoritmo o estrategia matemática utilizada en sistemas de control automático para calcular la señal de control (u) necesaria, con el objetivo de que la salida del sistema siga una referencia deseada a pesar de perturbaciones externas, incertidumbres del modelo o variaciones en las condiciones de operación. En este caso específico, la ley de control incorpora una estimación de la perturbación total f=z3 obtenida posiblemente mediante un observador o un filtro, para compensar activamente sus efectos y así mejorar la robustez y precisión del sistema. Este enfoque es fundamental en técnicas avanzadas de control, como el control por modos deslizantes o el control adaptivo, donde la cancelación de perturbaciones juega un papel clave en el desempeño del sistema.
 
 Una vez estimada la perturbación total $\hat{f} \approx z_3$, se compensa en la ley de control:
 
@@ -134,6 +143,7 @@ $$
 ## Diseño de Ganancias
 
 ## Cálculo de Ganancias (LADRC) – Análisis Detallado
+ el proceso de cálculo de ganancias en LADRC (Linear Active Disturbance Rejection Control). En esta variante lineal del ADRC, se emplea un observador de estado extendido lineal de orden 3 (LESO) para estimar las variables del sistema y una perturbación generalizada. Además, se utiliza un controlador de retroalimentación de estados tipo PD. Ambos componentes se diseñan mediante la asignación de polos, que consiste en elegir la ubicación deseada de los polos del sistema cerrado con base en dos parámetros fundamentales:Wo (ancho de banda del observador) y Wc  (ancho de banda del controlador). Estos parámetros determinan la velocidad de respuesta del observador y del controlador, respectivamente, y son clave para garantizar estabilidad y rendimiento deseado.
 
 **¿Qué se está haciendo en LADRC?**
 
@@ -218,7 +228,7 @@ $$
 
 ## Ejemplo 1
 
-El documento `.docx` proporciona un ejemplo donde se parte de una ecuación de segundo orden tipo resorte-masa-amortiguador:
+Se parte de una ecuación de segundo orden tipo resorte-masa-amortiguador:
 
 $$
 M\ddot{y} + B\dot{y} + Ky = u(t)
