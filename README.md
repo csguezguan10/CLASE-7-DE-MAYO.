@@ -1,6 +1,10 @@
 # CLASE-7-DE-MAYO.
 # Control por Rechazo Activo de Perturbaciones (ADRC)
 
+## Integrantes 
+Carlos Stiven Guezguan         Codigo 96039                           
+Juan Jose Martinez             Codigo 105353
+
 ## Introducción
 
 El **Control por Rechazo Activo de Perturbaciones (ADRC)** es una técnica moderna y robusta que permite controlar sistemas con incertidumbres internas y perturbaciones externas, sin depender de un modelo matemático preciso. ADRC fue desarrollado por el profesor Jingqing Han en la década de 1990 como una alternativa robusta al control PID tradicional y extendido por **Z. Gao (2003)**.
