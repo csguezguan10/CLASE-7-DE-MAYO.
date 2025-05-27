@@ -94,8 +94,6 @@ $$
 \end{aligned}
 $$
 
----
-
 ## Ley de Control
 
 Una vez estimada la perturbación total $\hat{f} \approx z_3$, se compensa en la ley de control:
@@ -132,8 +130,6 @@ $$
 $$
 u_0 = k_1 (r - z_1) - k_2 z_2
 $$
-
----
 
 ## Diseño de Ganancias
 
@@ -220,7 +216,6 @@ $$
 k_1 = \omega_c^2, \quad k_2 = 2\omega_c
 $$
 
----
 ## Ejemplo 1
 
 El documento `.docx` proporciona un ejemplo donde se parte de una ecuación de segundo orden tipo resorte-masa-amortiguador:
@@ -329,8 +324,6 @@ Este modelo tiene la forma ideal para ser controlado con ADRC, porque:
 | Rechazo a perturbaciones | Limitado | Activo en tiempo real |
 | Ajuste de parámetros | Empírico | Basado en ωo, ωc |
 
----
-
 ## Aplicaciones del ADRC
 
 **1. Convertidores DC-DC**
@@ -365,7 +358,6 @@ ADRC trata los efectos cruzados como perturbaciones, permitiendo control canal p
 * El enfoque LADRC, por su estructura lineal, resulta práctico para la implementación en sistemas reales, con una sintonización basada en anchos de banda definidos ($\omega_o$ y $\omega_c$).
 * Las aplicaciones de ADRC se extienden a sistemas electrónicos, térmicos, robóticos y multivariables, demostrando su versatilidad y efectividad en contextos donde otros métodos fallan.
 * En resumen, ADRC representa un avance conceptual y práctico en el diseño de sistemas de control modernos, ideal para situaciones donde el modelado preciso no es viable.
----
 
 ## Referencias
 
