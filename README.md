@@ -9,7 +9,6 @@ Juan Jose Martinez             Codigo 105353
 
 El **Control por Rechazo Activo de Perturbaciones (ADRC)** es una técnica moderna y robusta que permite controlar sistemas con incertidumbres internas y perturbaciones externas, sin depender de un modelo matemático preciso. ADRC fue desarrollado por el profesor Jingqing Han en la década de 1990 como una alternativa robusta al control PID tradicional y extendido por **Z. Gao (2003)**.
 
----
 
 ## Fundamentos del ADRC
 ADRC divide el diseño de control en tres bloques principales:
@@ -29,7 +28,6 @@ Este método se vuelve efectivo incluso en sistemas donde la dinámica completa 
 * **ESO (Extended State Observer):** Estima el estado extendido del sistema, que incluye las perturbaciones y modelado no conocido. Utiliza una estructura de observador de alta ganancia.
 * **Controlador de retroalimentación:** Usualmente un PD o un controlador de primer orden, que se encarga de cumplir con los objetivos de seguimiento.
 * **Estimación de entrada generalizada (Total Disturbance Estimation):** Se modela como una variable adicional en el observador.
----
 
 ## Modelo Matemático
 
