@@ -226,9 +226,7 @@ $$
 k_1 = \omega_c^2, \quad k_2 = 2\omega_c
 $$
 
-## Ejemplo 1
-
-Ecuación de Segundo Orden: Resorte-Masa-Amortiguador
+# Ecuación de Segundo Orden: Resorte-Masa-Amortiguador
 
 Se parte de una ecuación de segundo orden tipo resorte-masa-amortiguador, dada por:
 
@@ -246,7 +244,6 @@ $x_1 = y$ (posición)
 $x_2 = \dot{y}$ (velocidad)
 
 Así como también, presentar el modelo extendido con perturbación total, expresando $\dot{x_2}$ en la forma $b_0 u + f$, donde $b_0 = \frac{1}{M}$ y $f = -\frac{K}{M}x_1 - \frac{B}{M}x_2$.
-## Ejemplo 2
 
 ## Ecuación de la planta
 
