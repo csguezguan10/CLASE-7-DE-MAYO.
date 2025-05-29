@@ -228,31 +228,24 @@ $$
 
 ## Ejemplo 1
 
-Se parte de una ecuación de segundo orden tipo resorte-masa-amortiguador:
+Ecuación de Segundo Orden: Resorte-Masa-Amortiguador
 
-$$
-M\ddot{y} + B\dot{y} + Ky = u(t)
-$$
+Se parte de una ecuación de segundo orden tipo resorte-masa-amortiguador, dada por:
 
-De donde se obtiene la forma en espacio de estados:
+$M\ddot{y} + B\dot{y} + Ky = u(t)$
 
-$$
-\begin{aligned}
-x_1 &= y \\
-x_2 &= \dot{y} \\
-\dot{x}_1 &= x_2 \\
-\dot{x}_2 &= \frac{1}{M}(u - Bx_2 - Kx_1)
-\end{aligned}
-$$
+donde:
+* $M$ es la masa del sistema,
+* $B$ es el coeficiente de amortiguamiento (fricción),
+* $K$ es la constante del resorte,
+* $y$ es la posición de la masa,
+* $u(t)$ es la fuerza de entrada al sistema.
 
-Y el modelo extendido con perturbación total:
+Se pide obtener la forma en espacio de estados, definiendo las variables de estado:
+$x_1 = y$ (posición)
+$x_2 = \dot{y}$ (velocidad)
 
-$$
-\dot{x}_2 = b_0 u + f
-$$
-
-donde $f = -\frac{K}{M}x_1 - \frac{B}{M}x_2$ y $b_0 = \frac{1}{M}$.
-
+Así como también, presentar el modelo extendido con perturbación total, expresando $\dot{x_2}$ en la forma $b_0 u + f$, donde $b_0 = \frac{1}{M}$ y $f = -\frac{K}{M}x_1 - \frac{B}{M}x_2$.
 ## Ejemplo 2
 
 ## Ecuación de la planta
